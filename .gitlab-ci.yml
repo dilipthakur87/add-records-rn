@@ -20,5 +20,4 @@ PackageTest:
     name: testing
   only:
     - master
-  when: manual
 
