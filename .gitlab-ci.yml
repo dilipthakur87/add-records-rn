@@ -3,9 +3,11 @@ variables:
   SOURCE: "."
   PRODUCTION_BRANCH: "master"
 image: node:12.17.0
+cache:
+  paths:
+    - node_modules/
 stages:
   - test
-  - build
 before_script:
   - "mkdir -p ~/.ssh"
   - 'echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa'
@@ -13,18 +15,12 @@ before_script:
   - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
 PackageTest:
   stage: test
+  before_script:
+    - npm install --frozen-lockfile
   script:
     - echo "Building production package and deploying production environment"
     - npm test
   environment:
     name: testing
-  only:
-    - $PRODUCTION_BRANCH
-PackageBuild:
-  stage: build
-  script:
-    - echo "Building production package and deploying production environment"
-  environment:
-    name: production
   only:
     - $PRODUCTION_BRANCH
