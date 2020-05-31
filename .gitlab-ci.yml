@@ -1,6 +1,3 @@
-variables:
-  DOCKER_DRIVER: overlay2
-  SOURCE: "."
 image: node:12.17.0
 cache:
   paths:
@@ -9,11 +6,9 @@ stages:
   - test
   - build
 before_script:
-  - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    - npm install --frozen-lockfile
 PackageTest:
   stage: test
-  before_script:
-    - npm install --frozen-lockfile
   script:
     - echo "Testing"
     - npm test
