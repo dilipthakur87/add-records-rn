@@ -21,3 +21,5 @@ PackageTest:
     name: testing
   only:
     - $PRODUCTION_BRANCH
+  when: manual
+
