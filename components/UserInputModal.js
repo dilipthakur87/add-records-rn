@@ -40,7 +40,7 @@ const UserInputModal = (props) => {
 
         console.log("Users detail in modal = ", usersDetail)
 
-        await Storage.set("TEST3", usersDetail)
+        await Storage.set("TEST7", usersDetail)
         props.addData(usersDetail);
 
         // clear the text input
