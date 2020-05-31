@@ -61,9 +61,10 @@ const App = () => {
     <>
     <View style={styles.container}>
       <Text style={styles.header}>Users Detail</Text>
-      <View>
-        <TouchableOpacity  onPress={() => setShowModal(true)}>
-          <Icon name="plus" size={30} color="blue" style={{ marginLeft: 15 }} />
+      <View style={{ borderColor: '#1469AF', borderWidth: 1}}>
+        <TouchableOpacity style={{flexDirection: 'row', padding: 5}} onPress={() => setShowModal(true)}>
+          <Text style={{ fontSize: 15, color: '#1469AF', marginTop: 2}}>Add Entry</Text>                     
+          <Icon name="plus" size={20} color="blue" style={{ marginLeft: 5 }} />
         </TouchableOpacity>
       </View>
 
@@ -126,11 +127,12 @@ const styles = StyleSheet.create({
   
   header: {
     marginTop: '15%',
-    fontSize: 20,
+    fontSize: 30,
     color:'red',
     paddingBottom: 10
   },
   searchBar: {
+    marginTop: 5,
     backgroundColor: 'white',
     height: 40,
     borderRadius: 5,
