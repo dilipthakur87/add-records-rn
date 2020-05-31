@@ -1,7 +1,6 @@
 variables:
   DOCKER_DRIVER: overlay2
   SOURCE: "."
-  PRODUCTION_BRANCH: "master"
 image: node:12.17.0
 cache:
   paths:
@@ -20,6 +19,6 @@ PackageTest:
   environment:
     name: testing
   only:
-    - $PRODUCTION_BRANCH
+    - master
   when: manual
 
