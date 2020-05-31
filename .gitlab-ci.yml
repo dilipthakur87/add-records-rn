@@ -7,6 +7,7 @@ cache:
     - node_modules/
 stages:
   - test
+  - build
 before_script:
   - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
 PackageTest:
@@ -14,10 +15,19 @@ PackageTest:
   before_script:
     - npm install --frozen-lockfile
   script:
-    - echo "Building production package and deploying production environment"
+    - echo "Testing"
     - npm test
   environment:
     name: testing
+  only:
+    - master
+PackageBuild:
+  stage: build
+  script:
+    - echo "Building production package and deploying production environment"
+    - npm -v
+  environment:
+    name: building
   only:
     - master
 
