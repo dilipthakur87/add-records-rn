@@ -24,7 +24,10 @@ After this you can scan the qr to run the app on you phone. Make sure you have i
 
 
 ### App Screens (iPhone Screenshots - Simulator)
-![Home Screen](blob/app_screen_home.png =150x100)  
+<img src="./blob/app_screen_home.png" alt="Home Screen" width="200" height="350">
+
+
+<!-- ![Home Screen](blob/app_screen_home.png =150x100)   -->
 ![Modal Screel](blob/app_screen_modal.png =150x100)  
 ![DataList Screen](blob/app_screen_data.png =150x100)
 
