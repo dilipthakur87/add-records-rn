@@ -23,6 +23,9 @@ npm start
 After this you can scan the qr to run the app on you phone. Make sure you have installed expo client on your phone.
 
 
+### App Screens (iPhone Screenshots - Simulator)
+![Home Screen](blob/app_screen_home.png)  ![Modal Screel](blob/app_screen_modal.png)  ![DataList Screen](blob/app_screen_data.png)
+
 
 ### Continuous Integration with Gitlab
 
@@ -32,8 +35,6 @@ ssh-keygen -t rsa -b 4096 -C "your_email_here"
 ```
 
 - Add the [.gitlab-ci.yml](https://gitlab.com/dileepthakur87/add-records-rn/-/blob/master/.gitlab-ci.yml) file in the root directory of your app. 
-
-![test](blob/sample_yml.png)
 
 -- NOTE: There are two stages included here where test stage is to run the test under CI whereas the another stage build, here is to just show how we can work with multiple stages in the pipeline. For sample purpose, in the build stage, i am running ``` npm -v ```. This is actually for the deployment/build so commands used to build/deploy the project are to be added in the build stage.
 ```sh
@@ -67,7 +68,14 @@ PackageBuild:
 ```
 
 - Verify your yml file using **CI Lint** in Gitlab. You can find it from the **CI/CD** section. ( specially from the pipeline section on the top right corner or if the pipeline is not initiated before, it's even present in the jobs section on the top right corner) 
-- Push you code and under **Pipeline**, you can see your pipeline running. Tapping on the process, you can view the details/logs of each step included in the [.gitlab-ci.yml](https://gitlab.com/dileepthakur87/add-records-rn/-/blob/master/.gitlab-ci.yml) file.
+![CI Lint](blob/ci_lint.png)
+
+- Push you code and under **Pipeline**, you can see your pipeline running. 
+![Pipeline](blob/pipeline.png)
+
+Tapping on the process, you can view the details/logs of each step included in the [.gitlab-ci.yml](https://gitlab.com/dileepthakur87/add-records-rn/-/blob/master/.gitlab-ci.yml) file.
+![CI Success](blob/ci_success.png)
+
 
 ### Todos
 
