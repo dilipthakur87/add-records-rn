@@ -1,7 +1,7 @@
 import 'react-native';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import UserInputModal from '../components/UserInputModal'
+import UserInputModal from '../src/components/UserInputModal';
 
 it('renders correctly', () => {
     const tree = renderer.create(
