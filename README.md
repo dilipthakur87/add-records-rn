@@ -32,7 +32,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email_here"
 ```
 
 - Add the [.gitlab-ci.yml](https://gitlab.com/dileepthakur87/add-records-rn/-/blob/master/.gitlab-ci.yml) file in the root directory of your app. 
- ![aa](https://gitlab.com/dileepthakur87/add-records-rn/blob/master/blob/sample_yml.png) 
+ ![aa](blob/sample_yml.png) 
 
 
 ### Todos
