@@ -16,7 +16,7 @@ const App = () => {
   useEffect(() => {
     async function getUserData() {
       try {
-        let data = await Storage.get("TEST7")
+        let data = await Storage.get("TEST8")
         if( data !== undefined || data !== null) {
           setUserDetails(data)
           setFilteredDetails(data)
