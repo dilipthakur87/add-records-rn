@@ -1,11 +1,12 @@
 # Add Records in local storage in React Native with Continuous Integration in Gitlab
 
-### Features!
+### Features
 
   - Add multiple user records ( Name, Country, Phone Brand and Phone Number)
   - Store the records locally and list the records
   - Search the records on the basis of country or phone brand
   - Integrated CI ( Continuous Integration ) using Gitlab
+  - Basic tests for UserDetailCard rendering based on the props passed ( [UserDetail.test.js](https://gitlab.com/dileepthakur87/add-records-rn/-/blob/master/_tests_/UserDetail.test.js) ) and snapshot test for UserInputModal rendering ( [UserInputModal.test.js](https://gitlab.com/dileepthakur87/add-records-rn/-/blob/master/_tests_/UserInputModal.test.js) )
 
 ### Installation
 
