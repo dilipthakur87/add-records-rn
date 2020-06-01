@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, TextInput, View, TouchableOpacity, ScrollView } from 'react-native';
-import Storage from './service/StorageService'
+import Storage from './src/service/StorageService'
 import Icon from 'react-native-vector-icons/Feather';
 import { Feather } from '@expo/vector-icons';
 import UserInputModal from './src/components/UserInputModal';
@@ -84,7 +84,7 @@ const App = () => {
 
 
       { userDetails !== null ? 
-      <ScrollView style={{ width: '100%' }}>
+      <ScrollView style={{ width: '100%' }} keyboardShouldPersistTaps='handled'>
         {filteredDetails.map(item => (
           <UsersDetailCard 
             detail={item}

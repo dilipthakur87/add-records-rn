@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Text, View, TextInput, TouchableOpacity, Modal, Dimensions, Image, StyleSheet } from 'react-native';
+import { Text, View, TextInput, Alert, TouchableOpacity, KeyboardAvoidingView, Modal, Dimensions, Image, StyleSheet, ScrollView } from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import { verticalScale } from 'react-native-size-matters';
 import RNPickerSelect from 'react-native-picker-select';
@@ -38,9 +38,19 @@ const UserInputModal = (props) => {
             key: Date.now()
         }
 
-        console.log("Users detail in modal = ", usersDetail)
+        // console.log("Users detail in modal = ", usersDetail)
 
-        await Storage.set("TEST8", usersDetail)
+        try{
+            // store userDetail in local storage
+            await Storage.set("TEST8", usersDetail)
+        }catch(err){
+            // console.log("Unable to store data locally", err)
+            Alert.alert("Alert", "Unable to store data.",
+                [
+                    { text: 'OK', onPress: () => props.onClose(false) },
+                ],
+            );
+        }
         props.addData(usersDetail);
 
         // clear the text input
@@ -59,6 +69,9 @@ const UserInputModal = (props) => {
             transparent={true}
             visible={props.isVisible}
         >
+            <ScrollView>
+            <KeyboardAvoidingView style={{ height: '100%' }} behavior={"height"} enabled keyboardVerticalOffset={80}>
+
             <View style={{
                 flex: 1,
                 justifyContent: "center",
@@ -142,6 +155,9 @@ const UserInputModal = (props) => {
                     </View>
                 </View>
             </View>
+
+            </KeyboardAvoidingView>
+            </ScrollView>
         </Modal>
 
     );

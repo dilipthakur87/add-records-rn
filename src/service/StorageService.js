@@ -16,12 +16,7 @@ const set = async (key, value) => {
 
         // saving user details in local storage
         await AsyncStorage.setItem(key, JSON.stringify(newUsersDetail) )
-        .then( ()=>{
-            console.log('User Details were saved successfully')
-        } )
-        .catch( ()=>{
-            console.log('There was an error saving the product')
-        } )
+        
     } catch(err) {
         console.log("Error setting user details to storage = ", err)
         return true;
