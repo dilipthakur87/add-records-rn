@@ -3,8 +3,8 @@ import { StyleSheet, Text, TextInput, View, TouchableOpacity, ScrollView } from 
 import Storage from './service/StorageService'
 import Icon from 'react-native-vector-icons/Feather';
 import { Feather } from '@expo/vector-icons';
-import UserInputModal from './components/UserInputModal';
-import UsersDetailCard from './components/UsersDetailCard';
+import UserInputModal from './src/components/UserInputModal';
+import UsersDetailCard from './src/components/UsersDetailCard';
 
 const App = () => {
 

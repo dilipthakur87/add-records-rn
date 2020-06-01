@@ -82,7 +82,7 @@ const UserInputModal = (props) => {
                         >
                             <Image
                                 style={{ width: 20 * ratio, height: 20 * ratio, resizeMode: 'contain', tintColor: "#000", }}
-                                source={require('../assets/icon-close.png')}
+                                source={require('../../assets/icon-close.png')}
                             />   
                         </TouchableOpacity>
                     </View>
