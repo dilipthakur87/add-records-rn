@@ -30,6 +30,7 @@ After this you can scan the qr to run the app on you phone. Make sure you have i
     <img src="./blob/app_screen_modal.png" alt="Entry Modal Screen" width="250" height="400">
     <img src="./blob/app_screen_data.png" alt="DataList Screen" width="250" height="400">
 </div>
+
 ### Continuous Integration with Gitlab
 
 - Add your public key to gitlab. If you haven't one, you can generate public key using following command.
