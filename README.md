@@ -15,8 +15,16 @@ The app was developed with [Node.js](https://nodejs.org/) v12+ .
 Clone the repo and run the server
 
 ```sh
+# cloning from gitlab
 git clone https://gitlab.com/dileepthakur87/add-records-rn.git
+
+# cloning from github
+git clone https://github.com/dilipthakur87/add-records-rn.git
+
+# change the directory to the project's root directory
 cd add-records-rn
+
+# install dependencies and un the server
 npm install
 npm start
 ```
